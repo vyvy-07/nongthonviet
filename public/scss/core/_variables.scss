@@ -1,0 +1,100 @@
+$container-max-width: 100%;
+$container-width: 1270px; //1240 + 30px-padding(2 ben moi ben 15px)
+/*GRID - media queries breakpoints*/
+
+$xxs-min: 576px; //  TÙY CHỈNH
+$xs-min: 768px; // KHÔNG THAY ĐỔI
+$sm-min: 992px; // KHÔNG THAY ĐỔI
+$md-min: 1200px; // KHÔNG THAY ĐỔI
+$smd-min: 1440px; // KHÔNG THAY ĐỔI
+$lg-min: 2561px; //  TÙY CHỈNH
+$ipad-min: 1025px;
+$xxs-max: ($xxs-min - 1); // Small Mobile
+$xs-max: ($xs-min - 1); // Mobile
+$sm-max: ($sm-min - 1); // Tablet
+$md-max: ($md-min - 1);
+$smd-max: ($smd-min - 1); // Desktop
+$lg-max: ($lg-min - 1); // Large Desktop
+$ipad-max: ($ipad-min - 1); // color
+$black: #212121;
+$green: #066d3b;
+$grey: #999999;
+$grey2: #7b7b7b;
+$grey3: #525252;
+
+$green2: #97b640;
+$white: #ffffff;
+$gradient-cl: linear-gradient(180deg, #df1cff 0%, #814bf6 50.55%, #00bcff 100%);
+$t: 0.4s;
+$cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
+:root {
+  --black: #212121;
+  --green: #066d3b;
+  --green2: #97b640;
+  --white: #ffffff;
+  --grey: #999999;
+  --grey2: #7b7b7b;
+  --grey3: #525252;
+
+  --fs40: 40px;
+  --fs20: 20px;
+  --fs22: 22px;
+  --fs16: 16px;
+  --fs14: 14px;
+  --fs11: 11px;
+
+  --fs12: 12px;
+
+  // Genaral Variable
+  --gap: 30px;
+  --gap12: 12px;
+  --gap20: 20px;
+  --height-header: 132px;
+  --container-width: 1270px;
+  //height
+
+  --height-header: 174px;
+  // padding
+  --pd32: 32px;
+  --pd8: 8px;
+  --pd88: 88px;
+  --pdtag: 4px 16px;
+  --pd16: 16px;
+  --pd12: 12px;
+  --pd40-30: 30px 40px;
+  --pd10: 10px;
+
+  //mg
+  --mg16: 16px;
+  --mg86: 86px;
+  --mg60: 60px;
+  --mg20: 20px;
+  --mg08: 0 8px;
+  --mg12: 12px;
+  --mg20-48: 20px 0 48px;
+  //lineh
+  --lh18: 18px;
+  --lh20: 20px;
+  --lh48: 48px;
+  //height
+  --h-banner: 180px;
+  --h-input: 60px;
+  --h-btn: 60px;
+  --w-btn: 190px;
+  // min-width
+  --min-w: 123px;
+  --min-w180: 180px;
+
+  // @media (max-width: $md-max) {
+
+  // }
+  // @media (max-width: $ipad-max) {
+
+  // }
+  // @media (max-width: $sm-max) {
+
+  // }
+  // @media (max-width: $xs-max) {
+
+  // }
+}

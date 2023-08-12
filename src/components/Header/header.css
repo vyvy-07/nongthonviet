@@ -1,0 +1,16 @@
+.headermidle .headermidle__topic .headermidle__topic-icon,.headermidle .headermidle__topic  .headermidle__topic-search{
+    cursor: pointer;
+}
+.modal-fullmenu .headermidle__categories{
+    margin: 30px 0;
+}
+.modal-fullmenu .headermidle__categories .categories-item{
+    color: #212121;
+    padding: 0;
+margin: 5px 0;
+    text-decoration: initial;
+}
+.modal-fullmenu .headermidle__categories .item .categories-item{
+
+    text-transform: initial;
+}

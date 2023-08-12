@@ -1,0 +1,127 @@
+.footer {
+  color: $white;
+  margin-top: var(--mg86);
+  background: var(--black);
+
+  &__list {
+    @include dflex;
+    align-items: initial;
+    justify-content: space-between;
+    --pd5-6: 55px 0 20px;
+    padding: var(--pd5-6);
+    &-menu {
+      .categories-item {
+        color: $white;
+        font-family: rm;
+        display: block;
+        padding: 4px 0;
+      }
+    }
+  }
+  &__main {
+    display: grid;
+    gap: var(--gap20);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    &-produce {
+      grid-column: 1/8;
+      display: grid;
+      gap: var(--gap20);
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: auto;
+      .logomain {
+        grid-column: 1/6;
+        .heading-h3 {
+          margin: var(--mg20-48);
+        }
+        &__producers {
+          &-item {
+            line-height: var(--lh20);
+          }
+        }
+      }
+      .morecontent {
+        margin-top: var(--mg86);
+        grid-column: 6/8;
+        &__item {
+          padding: var(--pd8) 0;
+          &:first-child {
+            padding-top: 0;
+          }
+        }
+      }
+    }
+    &-register {
+      grid-column: 8/13;
+
+      .groupform {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        width: 100%;
+        height: var(--h-input);
+        &__input {
+          flex: 1;
+          width: 100%;
+          height: 100%;
+          outline: none;
+          border: 0;
+          font-size: var(--fs16);
+          font-family: rm;
+          color: $black;
+          --pd69: 69px;
+          padding-left: var(--pd69);
+          padding-right: var(--pd10);
+          &::placeholder {
+            font-size: var(--fs16);
+            font-family: rm;
+            color: $black;
+          }
+        }
+      }
+      .listbox {
+        @include dflex;
+        gap: var(--gap12);
+        margin: var(--mg20) 0 12px;
+        &__box {
+          position: relative;
+          width: 100%;
+          max-height: 206px;
+          padding-bottom: 41%;
+          background: $grey;
+          &-img {
+            position: absolute;
+            object-fit: cover;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .sign {
+        &.--ft {
+          justify-content: initial;
+          align-items: center;
+          .sign__socials {
+            margin-left: 8px;
+            &-icon {
+              .fb {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__info {
+    @include dflex;
+    --pd24-76: 24px 0 76px;
+    padding: var(--pd24-76);
+    &-item {
+      width: calc(100% / 2);
+      font-size: 16px;
+      line-height: 20px;
+      font-family: rb;
+    }
+  }
+}
