@@ -7,19 +7,17 @@ const BoxsItem = ({
   featuredImage,
   excerpt,
   category,
+  sapo,
+  title,
 }) => {
   return (
     <div className={`boxs__item ${className}`}>
       <a href="#" className="boxs__item-img">
-        <img
-          className="img"
-          src={featuredImage ? featuredImage : "img/banner2.jpg"}
-          alt=""
-        />
+        <img className="img" src={featuredImage || "img/banner2.jpg"} alt="" />
       </a>
       <div className="boxs__item-info">
         <h1 className="heading-h3">
-          <a href="#">{excerpt}</a>
+          <a href="#">{excerpt || title || ""}</a>
         </h1>
         {date__time && (
           <div className="date dflex fs13">

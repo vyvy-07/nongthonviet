@@ -8,18 +8,23 @@ const TwoCol = ({ dataMedia, isLoading }) => {
         <div className="gridcol b-bt p-tb32">
           {dataMedia?.length > 0 &&
             dataMedia?.slice(0, 1).map((item, index) => {
-              console.log("item?.featuredImage", item?.featuredImage);
-              return <BoxsItem className={"--boxs-xl"} {...item} />;
+              return (
+                <BoxsItem
+                  key={item?.id || index}
+                  className={"--boxs-xl"}
+                  {...item}
+                />
+              );
             })}
 
           <div className="boxs">
             {dataMedia?.length > 0 &&
-              dataMedia?.slice(1, dataMedia?.length).map((item, index) => {
+              dataMedia?.slice(1, 4).map((item, index) => {
                 return (
                   <BoxsItem
+                    key={item?.id || index}
                     date__time={false}
                     {...item}
-                    key={item?.id || index}
                   />
                 );
               })}

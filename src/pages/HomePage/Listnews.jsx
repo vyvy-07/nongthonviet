@@ -2,37 +2,35 @@ import React from "react";
 import BoxsItem from "../../components/BoxsItem";
 
 const Listnews = ({
-  dataNews,
+  data,
   isRender = true,
   className,
   children = false,
+  dataFoward,
+  label,
 }) => {
   return (
     <section className={`listnews ${className}`}>
       <div className="container">
         {isRender && (
           <div className="sctitle">
-            <h2 className="heading fs22 ffb">Tin tức</h2>
+            <h2
+              style={{ textTransform: "uppercase" }}
+              className="heading fs22 ffb"
+            >
+              {label}
+            </h2>
           </div>
         )}
         <div className="boxs p-tb32">
-          {dataNews?.length > 0 &&
-            dataNews?.map((item, index) => {
-              return <BoxsItem {...item} key={item?.id || index} />;
-            })}
-          {/* <div className="boxs__item">
-            <a href="#" className="boxs__item-img">
-              <img className="img" src="img/banner2.jpg" alt="" />
-            </a>
-            <div className="boxs__item-info">
-              <h1 className="heading-h3">
-                <a href="#">
-                  Dự thảo Luật Đất đai sửa đổi: Cần giải phóng, sử dụng hiệu quả
-                  hơn đất nông nghiệp
-                </a>
-              </h1>
-            </div>
-          </div> */}
+          {data?.length > 0
+            ? data?.slice(0, 4).map((item, index) => {
+                return <BoxsItem {...item} key={item?.id || index} />;
+              })
+            : dataFoward?.length > 0 &&
+              dataFoward?.slice(0, 4).map((item, index) => {
+                return <BoxsItem {...item} key={item?.id || index} />;
+              })}
         </div>
         {children && (
           <div className="listnews__company p-bt32">

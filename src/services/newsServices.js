@@ -7,4 +7,10 @@ export const ListNews = {
       `${BASE_URL}/article/listing?limit=7&skip=0&categoryId=${id}`
     );
   },
+  getListNews(query = "") {
+    return axios.get(
+      `${BASE_URL}/article/listing?limit=20&skip=0&sort=publicationTime%3Ddesc,isFeatured%3Ddesc&categoryId=${query}&includeChildCate=true&isRandomArrange=true`
+    );
+  },
 };
+// listing?limit=20&skip=0&sort=publicationTime%3Ddesc,isFeatured%3Ddesc&categoryId=6017deb908d7227e0a6f7274&includeChildCate=true&isRandomArrange=true
