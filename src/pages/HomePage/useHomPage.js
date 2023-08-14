@@ -15,7 +15,6 @@ const useHomPage = () => {
     dataSocials,
     dataPersons,
   } = usePage();
-
   return {
     dataMedia,
     dataCountry,

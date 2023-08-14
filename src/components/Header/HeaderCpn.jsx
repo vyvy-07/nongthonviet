@@ -1,5 +1,7 @@
 import React from "react";
 import ModalFullMenu from "./ModalFullMenu";
+import { Link } from "react-router-dom";
+import { PATH } from "../../constants/path";
 
 const HeaderCpn = ({ headerCpn }) => {
   return (
@@ -15,9 +17,9 @@ const HeaderCpn = ({ headerCpn }) => {
             </h2>
             <div className="datetime dtime">ngay,thoi tiet</div>
           </div>
-          <div className="header__between-logo">
+          <Link to={PATH.INDEX} className="header__between-logo">
             <img className="logo green1" src="/img/logo.png" alt="" />
-          </div>
+          </Link>
           <div className="header__between-socials">
             <div className="tags">
               <a href="#" className="tags__item">

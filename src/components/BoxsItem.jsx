@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { PATH } from "../constants/path";
 
 const BoxsItem = ({
   className,
@@ -8,16 +10,22 @@ const BoxsItem = ({
   excerpt,
   category,
   sapo,
+  alias,
   title,
 }) => {
   return (
     <div className={`boxs__item ${className}`}>
-      <a href="#" className="boxs__item-img">
+      <Link
+        to={PATH.NEWS_DETAIL.replace(":alias", alias)}
+        className="boxs__item-img"
+      >
         <img className="img" src={featuredImage || "img/banner2.jpg"} alt="" />
-      </a>
+      </Link>
       <div className="boxs__item-info">
         <h1 className="heading-h3">
-          <a href="#">{excerpt || title || ""}</a>
+          <Link to={PATH.NEWS_DETAIL.replace(":alias", alias)}>
+            {excerpt || title || ""}
+          </Link>
         </h1>
         {date__time && (
           <div className="date dflex fs13">
