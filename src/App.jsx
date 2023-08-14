@@ -9,11 +9,11 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path={PATH.INDEX} element={<MainLayout />}>
+        <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
           <Route path={PATH.NEWS_DETAIL} element={<ProductDetail />} />
-          <Route path="*" element={<Error404 />} />
         </Route>
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </>
   );
