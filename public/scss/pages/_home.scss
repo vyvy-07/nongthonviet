@@ -110,28 +110,6 @@
           }
         }
       }
-      .viewmore {
-        @include dflex;
-        cursor: pointer;
-        &::before {
-          content: "";
-          display: block;
-          flex: 1;
-          height: 1px;
-          background: $grey;
-        }
-        .text {
-          --pd28: 28px;
-          padding: 0 var(--pd28);
-        }
-        &::after {
-          content: "";
-          display: block;
-          flex: 1;
-          height: 1px;
-          background: $grey;
-        }
-      }
     }
 
     &-wrapright {

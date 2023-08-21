@@ -6,7 +6,7 @@ const ModalFullMenu = ({ isModal, setIsModal, listCategory }) => {
       <div className="container">
         <div className="btn-close" onClick={() => setIsModal(false)}>
           <span className>Đóng</span>
-          <img src="img/btn-close.svg" alt="" />
+          <img src="/img/btn-close.svg" alt="" />
         </div>
         {listCategory?.length > 0 &&
           listCategory?.map((item, index) => {

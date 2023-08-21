@@ -7,10 +7,6 @@ import Loading from "../components/Loading";
 const pageContext = createContext({});
 export const PageProvider = ({ children }) => {
   const [listCategory, setListCategory] = useState([]);
-  // const [idMedia, setIdMedia] = useState("");
-  // const [news, setNews] = useState("");
-  // const [country360, setCountry360] = useState("");
-  // const [forward, setForward] = useState("");
   const [dataSocials, setDataSocials] = useState([]);
   const [dataMedia, setDataMedia] = useState([]);
   const [dataNews, setDataNews] = useState([]);
@@ -27,6 +23,19 @@ export const PageProvider = ({ children }) => {
     socials: "",
     persons: "",
   });
+
+  const [isModal, setIsModal] = useState(false);
+
+  const onChangeModal = () => setIsModal(!isModal);
+
+  //open modal
+  const headerMidle = {
+    listCategory,
+    setListCategory,
+    onChangeModal,
+    setIsModal,
+    isModal,
+  };
 
   const getCategory = async () => {
     try {
@@ -193,6 +202,7 @@ export const PageProvider = ({ children }) => {
         dataNewCountry,
         dataSocials,
         dataPersons,
+        headerMidle,
       }}
     >
       {children}

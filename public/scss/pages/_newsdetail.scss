@@ -1,0 +1,218 @@
+.sccontent {
+  font-family: rr;
+  font-size: 17px;
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: var(--pd32);
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    &-btn {
+      padding: 5px 4px;
+      border-radius: 100px;
+      border: 1px solid $black;
+      p {
+        span {
+          display: block;
+          margin: 8px 0;
+        }
+        &::after,
+        &::before {
+          content: "+";
+          width: 20px;
+          height: 20px;
+          display: block;
+          border: 1px solid $black;
+          border-radius: 100px;
+          @include dflex;
+          font-weight: 800;
+        }
+        &::before {
+          content: "-";
+        }
+      }
+    }
+    &-item {
+      .icon_img {
+        padding-top: 12px;
+      }
+      &.between {
+        padding-bottom: 12px;
+
+        border-bottom: 1px solid $black;
+      }
+    }
+  }
+
+  &__between {
+    flex: 1;
+    &-head {
+      .author {
+        display: flex;
+        &__writer {
+          display: flex;
+          align-items: center;
+          &::after {
+            content: "";
+            margin: 0 4px;
+            width: 4px;
+            height: 4px;
+            border-radius: 100px;
+            background-color: $grey2;
+          }
+        }
+      }
+    }
+    &-detail {
+      .img-desc {
+        .textnote {
+          padding: 8px;
+          border-bottom: 1px solid $grey2;
+        }
+      }
+    }
+    .desc.note {
+      padding: 20px;
+      font-size: 16px;
+      // background-color: $grey;
+    }
+    &-tag {
+      padding-left: var(--pd32);
+      a {
+        color: $black;
+      }
+      .sharing {
+        //   @include dflex;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0 26px;
+        .itemsharing {
+          display: flex;
+          align-items: center;
+          .tag {
+            color: $white;
+
+            padding: 4px 12px;
+            background: #448aff;
+            border-radius: 4px;
+          }
+          .item {
+            margin-right: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    width: 300px;
+    // margin-left: var(--pd32);
+    &-banner {
+      display: block;
+      //   gap: var(--gap);
+      margin-left: 0 var(--pd32);
+
+      background-color: aqua;
+    }
+  }
+}
+//comments
+.comments {
+  .container {
+    max-width: 925px;
+  }
+  .heading {
+    margin-left: -30px;
+  }
+  &__inputgroup {
+    margin-left: -30px;
+    padding-top: 12px;
+    @include dflex;
+    justify-content: inherit;
+    align-items: inherit;
+
+    &-avt {
+      width: 40px;
+      cursor: pointer;
+      height: 40px;
+      border-radius: 100px;
+      background-color: $grey;
+      @include dflex;
+
+      .img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-input {
+      flex: 1;
+      margin-left: 12px;
+
+      .input {
+        width: 100%;
+        border: 0;
+        outline: 0;
+        border-bottom: 1px solid $grey;
+        margin-bottom: 4px;
+        font-size: var(--fs17);
+
+        &::placeholder {
+          font-family: rr;
+          font-size: var(--fs17);
+        }
+      }
+      .btngr {
+        @include dflex;
+        justify-content: space-between;
+        &_btn {
+          cursor: pointer;
+          border: 0;
+          outline: 0;
+          padding: 4px 16px;
+          border-radius: 20px;
+        }
+      }
+      &.--cmt {
+        // padding: 0 12px 0 40px ;
+        display: flex;
+        flex-direction: column;
+        .btngr {
+          padding-top: 4px;
+          justify-content: start;
+          border-bottom: 1px solid $grey5;
+          padding-bottom: calc(var(--pd32) - 15px);
+          &_icon {
+            margin-right: 4px;
+          }
+          &_number {
+            margin-right: 12px;
+          }
+        }
+      }
+    }
+
+    &.--repcmt {
+      padding: 0 12px 0 40px;
+
+      padding-top: 12px;
+      .--cmt {
+        .btngr {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+  .--company,
+  .viewmore {
+    margin-left: -30px;
+  }
+  .--company {
+    padding: var(--pd32) 0;
+  }
+}

@@ -2,10 +2,14 @@ import axios from "axios";
 import { BASE_URL } from "../constants/env";
 
 export const ListNews = {
-  getNews(id) {
+  getNews(id = "", alias = "") {
     return axios.get(
       `${BASE_URL}/article/listing?limit=7&skip=0&categoryId=${id}`
     );
+  },
+  getNewsDetail(alias = "") {
+    //api.nongthonviet.com.vn/public/article/
+    return axios.get(`${BASE_URL}/article/${alias}`);
   },
   getListNews(query = "") {
     return axios.get(

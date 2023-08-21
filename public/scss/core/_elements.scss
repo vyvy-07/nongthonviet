@@ -3,11 +3,15 @@
   font-size: var(--fs40);
   line-height: var(--lh48);
 }
+
 .heading-h2 {
   font-size: var(--fs20);
 }
 .heading-h3 {
   font-size: var(--fs16);
+}
+.fs18 {
+  font-size: 18px !important;
 }
 .heading-h4 {
   font-size: var(--fs14);
@@ -16,13 +20,18 @@
 .green1 {
   background: var(--green);
 }
-
+.fs18 {
+  font-size: 18px;
+}
 // padding
 .p-tb32 {
   padding: var(--pd32) 0;
 }
 .p-tb12 {
   padding: 12px 0;
+}
+.p-bt12 {
+  padding-bottom: 12px;
 }
 .p-bt32 {
   padding-bottom: var(--pd32);
@@ -52,6 +61,7 @@
 .pdtop16 {
   padding-top: 16px;
 }
+
 //border
 .bbt4 {
   border-bottom: 4px solid var(--black);
@@ -64,8 +74,15 @@
   border-top: 1px solid var(--black);
   border-bottom: 1px solid var(--black);
 }
+.b-tbgr {
+  border-top: 1px solid $grey5;
+  border-bottom: 1px solid $grey5;
+}
 .b-bt {
   border-bottom: 1px solid var(--black);
+}
+.b-btgr {
+  border-bottom: 1px solid $grey;
 }
 //margin
 .m-tb32 {
@@ -88,17 +105,34 @@
 .ffb {
   font-family: rb;
 }
+.ffri {
+  font-family: ri;
+}
+.fs10 {
+  font-size: 10px;
+}
 .fs13 {
   font-size: 13px;
 }
 .fs14 {
   font-size: 14px;
 }
+.fs17 {
+  font-size: 17px;
+}
 .fs22 {
   font-size: 22px;
 }
 .fs24 {
   font-size: 22px;
+}
+.fs12 {
+  font-size: var(--fs12);
+}
+
+.fs28 {
+  font-size: var(--fs28);
+  // line-height: var(--lh48);
 }
 .ffrm {
   font-family: rm;
@@ -112,4 +146,7 @@
 }
 .black {
   color: $black;
+}
+.db {
+  display: block;
 }
