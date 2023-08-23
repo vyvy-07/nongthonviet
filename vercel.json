@@ -4,7 +4,10 @@
         "src": "/(.*)",
         "destination": "/"
       }
-    ],"rewrites": [{ "source": "/(.*)", "destination": "/" }]
+    ],"rewrites": [{ "source": "/(.*)", "destination": "/" }],
+    "buildCommand": "next build", "cleanUrls": true, "devCommand": "next dev"
+
+
   }
   
   
