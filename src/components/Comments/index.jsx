@@ -63,20 +63,20 @@ const Comments = () => {
             </div>
           </div>
         </div>
-        <p className="viewmore ffb fs16 grey7">
+        <p className="viewmore ffb fs16 grey7" style={{ paddingLeft: "0" }}>
           <span className="text">Xem thêm bình luận</span>
         </p>
         <div className="listnews --company">
           <div className="container">
             <div className="listnews__company">
               <div className="listnews__company-item">
-                <img className="img" src="simg/lg-company.svg" alt="" />
+                <img className="img" src="/img/banner3.jpg" alt="" />
               </div>
               <div className="listnews__company-item">
-                <img className="img" src="simg/ma.svg" alt="" />
+                <img className="img" src="/img/banner4.jpg" alt="" />
               </div>
               <div className="listnews__company-item">
-                <img className="img" src="simg/man.svg" alt="" />
+                <img className="img" src="/img/banner6.jpg" alt="" />
               </div>
             </div>
           </div>

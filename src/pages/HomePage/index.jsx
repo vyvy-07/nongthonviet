@@ -10,40 +10,40 @@ import Headermidle from "../../components/HeaderMidle/Headermidle";
 import Newest from "../../components/Newest/Newest";
 const HomePage = () => {
   const {
-    dataMedia,
-    dataPersons,
-    dataNews,
-    dataCountry,
-    dataFoward,
-    dataNewCountry,
-    dataSocials,
+    load,
+    dataPs,
+    dataInfoGr,
+    dataRadio,
     listNewsRandom,
-    isLoading,
+    dataVideo,
+    dataEmg,
     headerMidle,
   } = useHomPage() || {};
+  const { isLoading, loadNewRandom } = load || {};
 
+  if (isLoading || loadNewRandom) {
+    return <Loading />;
+  }
   return (
+    // <h1>hehe</h1>
     <>
       <Headermidle headerMidle={headerMidle} />
       <main className="homepage">
-        <TwoCol dataMedia={dataMedia} />
-        <Listnews isRender={false} data={dataNews} label="Tin tức" />
+        <TwoCol data={dataVideo} />
+        <Listnews isRender={false} data={dataVideo} />
         <Advert />
-        <ThreeCol data={dataCountry} label="Nông Nghiệp 360" />
+        <ThreeCol data={dataEmg} label="Emagazine" />
         <Listnews
           className="--company"
           children
-          data={dataFoward}
-          label="Tầm nhìn các chuyên gia"
+          data={dataRadio}
+          label="Radio"
         />
-        <ThreeCol
-          classname={false}
-          data={dataNewCountry}
-          label="Nông Thôn mới"
-        />
-        <Listnews data={dataSocials} label={"Vì cộng đồng"} />
+        <ThreeCol classname={false} data={dataInfoGr} label="Infographic" />
+        <Listnews data={dataPs} label={"Phóng sự ảnh"} />
         <Advert />
-        <ThreeCol data={dataPersons} label="Người truyền lửa" />
+        {/* <ThreeCol data={dataPersons}  label="Người truyền lửa" /> */}
+        <ThreeCol data={listNewsRandom} label="Tin tức liên quan " />
         <Newest data={listNewsRandom} />
       </main>
     </>

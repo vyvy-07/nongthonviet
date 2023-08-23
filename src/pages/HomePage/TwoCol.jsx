@@ -1,13 +1,13 @@
 import React from "react";
 import BoxsItem from "../../components/BoxsItem";
 
-const TwoCol = ({ dataMedia, isLoading }) => {
+const TwoCol = ({ data }) => {
   return (
     <section className="twoCol">
       <div className="container">
         <div className="gridcol b-bt p-tb32">
-          {dataMedia?.length > 0 &&
-            dataMedia?.slice(0, 1).map((item, index) => {
+          {data?.length > 0 &&
+            data?.slice(0, 1).map((item, index) => {
               return (
                 <BoxsItem
                   key={item?.id || index}
@@ -18,8 +18,8 @@ const TwoCol = ({ dataMedia, isLoading }) => {
             })}
 
           <div className="boxs">
-            {dataMedia?.length > 0 &&
-              dataMedia?.slice(1, 4).map((item, index) => {
+            {data?.length > 0 &&
+              data?.slice(1, 4).map((item, index) => {
                 return (
                   <BoxsItem
                     key={item?.id || index}

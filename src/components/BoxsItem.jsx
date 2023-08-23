@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { PATH } from "../constants/path";
+import HLSPlayer from "react-hls";
 
 const BoxsItem = ({
   className,
@@ -12,19 +13,33 @@ const BoxsItem = ({
   sapo,
   alias,
   title,
+  featuredMedia,
+  classTitle = "",
+  postMedia,
 }) => {
   return (
     <div className={`boxs__item ${className}`}>
-      <Link
-        to={PATH.NEWS_DETAIL.replace(":alias", alias)}
-        className="boxs__item-img"
-      >
-        <img className="img" src={featuredImage || "img/banner2.jpg"} alt="" />
-      </Link>
-      <div className="boxs__item-info">
+      {featuredMedia?.uri ? (
+        <Link to={`/news-detail/${alias}`} className="boxs__item-img">
+          <video
+            className="img"
+            src={`${featuredMedia?.uri}?autoplay=1` || []}
+            alt={featuredMedia?.alt}
+            autoPlay
+            muted
+            loop
+            controls
+          ></video>
+        </Link>
+      ) : (
+        <Link to={`/news-detail/${alias}`} className="boxs__item-img">
+          <img className="img" src={featuredImage || "img/banner2.jpg"} />
+        </Link>
+      )}
+      <div className="boxs__item-info" style={{ minHeight: "92px" }}>
         <h1 className="heading-h3">
-          <Link to={PATH.NEWS_DETAIL.replace(":alias", alias)}>
-            {excerpt || title || ""}
+          <Link className={classTitle} to={`/news-detail/${alias}`}>
+            {title || ""}
           </Link>
         </h1>
         {date__time && (
@@ -35,7 +50,7 @@ const BoxsItem = ({
             </a>
           </div>
         )}
-        {desc_e && <p className="description">{sapo}</p>}
+        {desc_e && <p className="description ">{sapo}</p>}
       </div>
     </div>
   );

@@ -3,7 +3,8 @@ import ModalFullMenu from "./ModalFullMenu";
 import { Link } from "react-router-dom";
 import { PATH } from "../../constants/path";
 
-const HeaderCpn = ({ headerCpn }) => {
+const HeaderCpn = ({ headerMidle }) => {
+  // const {alias}
   return (
     <header className="header">
       <div className="container">

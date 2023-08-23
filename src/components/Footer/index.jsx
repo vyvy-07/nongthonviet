@@ -157,13 +157,25 @@ const Footer = () => {
             </div>
             <div className="listbox">
               <div className="listbox__box">
-                <img className="listbox__box-img" src alt={1} />
+                <img
+                  className="listbox__box-img"
+                  src="/img/banner4.jpg"
+                  alt={1}
+                />
               </div>
               <div className="listbox__box">
-                <img className="listbox__box-img" src alt={2} />
+                <img
+                  className="listbox__box-img"
+                  src="/img/banner6.jpg"
+                  alt={2}
+                />
               </div>
               <div className="listbox__box">
-                <img className="listbox__box-img" src alt={3} />
+                <img
+                  className="listbox__box-img"
+                  src="/img/banner3.jpg"
+                  alt={3}
+                />
               </div>
             </div>
             <div className="sign --ft">

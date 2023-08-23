@@ -4,17 +4,20 @@ import { BASE_URL } from "../constants/env";
 export const ListNews = {
   getNews(id = "", alias = "") {
     return axios.get(
-      `${BASE_URL}/article/listing?limit=7&skip=0&categoryId=${id}`
+      `${BASE_URL}/article/listing?limit=7&skip=0&categoryId=${id}&isRandomArrange=true`
     );
   },
   getNewsDetail(alias = "") {
-    //api.nongthonviet.com.vn/public/article/
     return axios.get(`${BASE_URL}/article/${alias}`);
   },
-  getListNews(query = "") {
+  getListNews(id, query = "") {
     return axios.get(
-      `${BASE_URL}/article/listing?limit=20&skip=0&sort=publicationTime%3Ddesc,isFeatured%3Ddesc&categoryId=${query}&includeChildCate=true&isRandomArrange=true`
+      `${BASE_URL}/article/listing?limit=30&skip=0&sort=publicationTime%3Ddesc,isFeatured%3Ddesc&categoryId=${id}&includeChildCate=true&isRandomArrange=true&${query}`
+    );
+  },
+  getDataCateItem(id = "", query = "") {
+    return axios.get(
+      `${BASE_URL}/article/listing?limit=${query}&skip=0&categoryId=${id}&includeChildCate=true&sort=publicationTime%3Ddesc&isRandomArrange=true`
     );
   },
 };
-// listing?limit=20&skip=0&sort=publicationTime%3Ddesc,isFeatured%3Ddesc&categoryId=6017deb908d7227e0a6f7274&includeChildCate=true&isRandomArrange=true

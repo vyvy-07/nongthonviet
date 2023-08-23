@@ -5,22 +5,30 @@ import Comments from "../../components/Comments";
 import ContentDetail from "./ContentDetail";
 import useNewsDetail from "./useNewsDetail";
 import Loading from "../../components/Loading";
+import useDebounce from "../../hooks/useDebounce";
 
 const NewsDetail = () => {
   // const { slug } = useNewsDetail();
-  const { alias, isLoading, dataNewsDetail } = useNewsDetail();
-  if (!!isLoading) {
-    console.log("isLoading", isLoading);
-    return <Loading />;
-  }
+  const { isLoading, dataNewsDetail, dataNewsRelate, dataFeatured } =
+    useNewsDetail();
+  // if (!!isLoading) {
+  //   console.log("isLoading", isLoading);
+  //   return <Loading />;
+  // }
+  const loading = useDebounce(isLoading, 400);
+  console.log("dataFeatured", dataFeatured);
   return (
     <div>
-      <Headermidle heading={false} nav={false} />
-      <main>
-        <ContentDetail {...dataNewsDetail} />
-        <Comments {...dataNewsDetail} />
-        <Newest label="Mới nhất" />
-      </main>
+      {/* {dataFeatured && ( */}
+      <>
+        <Headermidle heading={false} nav={false} />
+        <main>
+          <ContentDetail {...dataNewsDetail} data={dataNewsRelate} />
+          <Comments {...dataNewsDetail} />
+          <Newest label="Mới nhất" data={dataFeatured} />
+        </main>
+      </>
+      {/* )} */}
     </div>
   );
 };

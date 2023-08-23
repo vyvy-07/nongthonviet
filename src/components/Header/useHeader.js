@@ -6,7 +6,6 @@ const useHeader = () => {
 
   const { listCategory, setListCategory } = usePage();
   const onChangeModal = () => setIsModal(!isModal);
-
   //open modal
   const headerMidle = {
     listCategory,

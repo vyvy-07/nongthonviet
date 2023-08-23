@@ -1,0 +1,15 @@
+.--boxs-xs .boxs__item-info{
+    min-height: 0 !important ;
+}
+.boxs.--boxs-xs .boxs__item:first-child {
+    padding: 0;
+    padding-bottom: var(--pd10);
+    border: 0;
+}
+.listnews.--company .listnews__company-item .img {
+    object-fit: cover;
+}
+.advert .banner__heading{
+    background: 0;
+    display: block;
+}

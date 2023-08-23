@@ -32,7 +32,7 @@ const ThreeCol = ({ classname = true, data, label }) => {
           </div>
           <div className="boxs --boxs-xs">
             {data?.length > 0 &&
-              data?.slice(2, data?.length).map((item, index) => {
+              data?.slice(2, 7).map((item, index) => {
                 return (
                   <BoxsItem
                     date__time={false}

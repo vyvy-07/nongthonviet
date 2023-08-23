@@ -1,6 +1,9 @@
+const NEWS = "/news-detail";
+
 export const PATH = {
   INDEX: "/",
-  DETAIL_PAGE: "/detail/" + ":alias",
-  NEWS_DETAIL: "/news-detail/" + ":alias",
+  NEWS,
+  DETAIL_PAGE: "/detail" + "/:alias",
+  NEWS_DETAIL: NEWS + "/:alias",
   ERROR: "/error404",
 };

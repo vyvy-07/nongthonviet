@@ -23,25 +23,21 @@ const Listnews = ({
           </div>
         )}
         <div className="boxs p-tb32">
-          {data?.length > 0
-            ? data?.slice(0, 4).map((item, index) => {
-                return <BoxsItem {...item} key={item?.id || index} />;
-              })
-            : dataFoward?.length > 0 &&
-              dataFoward?.slice(0, 4).map((item, index) => {
-                return <BoxsItem {...item} key={item?.id || index} />;
-              })}
+          {data?.length > 0 &&
+            data?.slice(5, 9).map((item, index) => {
+              return <BoxsItem {...item} key={item?.id || index} />;
+            })}
         </div>
         {children && (
           <div className="listnews__company p-bt32">
             <div className="listnews__company-item">
-              <img className="img" src="img/lg-company.svg" alt="" />
+              <img className="img" src="/img/banner3.jpg" alt="" />
             </div>
             <div className="listnews__company-item">
-              <img className="img" src="img/ma.svg" alt="" />
+              <img className="img" src="/img/banner4.jpg" alt="" />
             </div>
             <div className="listnews__company-item">
-              <img className="img" src="img/man.svg" alt="" />
+              <img className="img" src="/img/banner6.jpg" alt="" />
             </div>
           </div>
         )}

@@ -3,7 +3,7 @@ import ModalFullMenu from "../Header/ModalFullMenu";
 import { Link } from "react-router-dom";
 import { PATH } from "../../constants/path";
 import { usePage } from "../../hooks/useContext";
-const Headermidle = ({ nav = true, heading = true }) => {
+const Headermidle = ({ nav = true, heading = true, label = "" }) => {
   const { headerMidle } = usePage() || {};
   const { listCategory, onChangeModal, setIsModal, isModal } =
     headerMidle || {};
@@ -19,7 +19,9 @@ const Headermidle = ({ nav = true, heading = true }) => {
               <h3 className="heading-h3">CÂU CHUYỆN TIÊU ĐIỂM:</h3>
               <h3 className="heading-h2">
                 NÔNG NGHIỆP TUẦN HOÀN TỪ NÔNG DÂN SINH THÁI
+                {label}
               </h3>
+              <h3 className="heading-h2">{label}</h3>
             </div>
             <div className="headermidle__topic-search">
               <input
